@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Practice_9_task_38
 {
     class Head
-    {
+    {//класс для списка с информационным полем int
         int info;//информационное поле
         Head next;//адресное поле
 

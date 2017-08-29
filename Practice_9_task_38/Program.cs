@@ -30,7 +30,35 @@ namespace Practice_9_task_38
                 beg = beg.Next;
             }
             return list;
-        }       
+        }
+
+        static void WriteList(Point2 list)
+        {
+
+        }
+        static void MadeLists(Head head)
+        {//процедура создания двух списков с информационными полями, ссылающимися на элементы списка head
+            Point2 Pos = new Practice_9_task_38.Point2();
+            Point2 PosBeg = new Practice_9_task_38.Point2();
+            Point2 Neg = new Practice_9_task_38.Point2();
+            Point2 NegBeg = new Point2();
+            Head beg = new Head();
+            beg = head;
+            while (beg!= null)
+            {
+                if (beg.Info > 0)
+                {
+                    PosBeg.Info = beg;
+                    PosBeg = PosBeg.Next;
+                }
+                if (beg.Info < 0)
+                {
+                    NegBeg.Info = beg;
+                    NegBeg = NegBeg.Next;
+                }
+                beg = beg.Next;
+            }
+        }      
         static void Main(string[] args)
         {
             int N;
@@ -42,6 +70,7 @@ namespace Practice_9_task_38
 
             Head head = new Head();
             head = MadeHead(N);
+            MadeLists(head);
         }
     }
 }
