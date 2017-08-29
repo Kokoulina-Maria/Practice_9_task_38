@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Practice_9_task_38
 {
-    class Point
+    class Head
     {
         int info;//информационное поле
-        Point next;//адресное поле
+        Head next;//адресное поле
 
         //свойства
 
@@ -18,7 +18,7 @@ namespace Practice_9_task_38
             get { return info; }
             set { info = value; }
         }
-        public Point Next
+        public Head Next
         {
             get { return next; }
             set { next = value; }
@@ -26,21 +26,21 @@ namespace Practice_9_task_38
 
         //конструкторы
 
-        public Point()//конструктор без параметров
+        public Head()//конструктор без параметров
         {
             info = 0;
             next = null;
         }
-        public Point(int number)//конструктор с одним параметром
-        {
-            info = number;
-            next = null;
-        }
-        public Point (int number, Point next)//конструктор с двумя параметрами
-        {
-            this.next = next;
-            info = number;
-        }
+        //public Head(int number)//конструктор с одним параметром
+        //{
+        //    info = number;
+        //    next = null;
+        //}
+        //public Head (int number, Head next)//конструктор с двумя параметрами
+        //{
+        //    this.next = next;
+        //    info = number;
+        //}
 
         public override string ToString()
         {
