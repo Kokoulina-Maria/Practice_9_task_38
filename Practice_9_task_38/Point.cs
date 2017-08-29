@@ -28,23 +28,13 @@ namespace Practice_9_task_38
 
         public Head()//конструктор без параметров
         {
-            info = 0;
+            info = default(int);
             next = null;
         }
-        //public Head(int number)//конструктор с одним параметром
-        //{
-        //    info = number;
-        //    next = null;
-        //}
-        //public Head (int number, Head next)//конструктор с двумя параметрами
-        //{
-        //    this.next = next;
-        //    info = number;
-        //}
 
         public override string ToString()
         {
-            return info + " --> ";
+            return info+" ";
         }
     }
 }
